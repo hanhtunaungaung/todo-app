@@ -1,7 +1,7 @@
-import Vue from 'vue';
-import Router from 'vue-router';
+import Vue from 'vue'
+import Router from 'vue-router'
 
-Vue.use(Router);
+Vue.use(Router)
 
 export default new Router({
   routes: [
@@ -10,9 +10,22 @@ export default new Router({
       name: 'landing-page',
       component: require('@/components/LandingPage').default,
     },
+
+    {
+      path: '/todos',
+      name: 'todos',
+      component: require('@/components/TodosPage').default,
+    },
+
+    {
+      path: '/notes',
+      name: 'Notes',
+      component: require('@/components/NotePage').default,
+    },
+
     {
       path: '*',
       redirect: '/',
     },
   ],
-});
+})
